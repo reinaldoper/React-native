@@ -13,8 +13,8 @@ Este é um projeto de exemplo em React Native que utiliza navegação entre tela
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone git@github.com:reinaldoper/React-native.git
+cd React-native
 ```
 
 2. Instale as dependências:
