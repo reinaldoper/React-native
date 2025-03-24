@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { StatusBar } from "expo-status-bar";
-import { View, ScrollView, ActivityIndicator } from "react-native";
-import { Text, Button, Card } from "react-native-elements";
-import styles from "../styles";
-import fetchPosts from "../service/Fetch.js";
+import React, { useEffect, useState } from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { View, ScrollView, ActivityIndicator } from 'react-native';
+import { Text, Button, Card, Icon } from 'react-native-elements';
+import styles from '../styles';
+import fetchPosts from '../service/Fetch.js';
 
 export default function HomeScreen({ navigation }) {
   const [posts, setPosts] = useState([]);
@@ -50,9 +50,17 @@ export default function HomeScreen({ navigation }) {
             <Card.Divider />
             <Text style={styles.body}>{post.body}</Text>
             <Button
+              icon={
+                <Icon
+                  name="info"
+                  type="material"
+                  color="#ffffff"
+                  iconStyle={{ marginRight: 10 }}
+                />
+              }
               title="Ver Detalhes"
               onPress={() =>
-                navigation.navigate("Details", { postId: post.id })
+                navigation.navigate('Details', { postId: post.id })
               }
             />
           </Card>

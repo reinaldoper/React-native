@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, ActivityIndicator } from 'react-native';
-import { Text, Button, Card } from 'react-native-elements';
+import { Text, Button, Card, Icon } from 'react-native-elements';
 import styles from '../styles';
 
 export default function DetailsScreen({ route, navigation }) {
@@ -29,6 +29,14 @@ export default function DetailsScreen({ route, navigation }) {
         <Card.Divider />
         <Text style={styles.body}>{post.body}</Text>
         <Button
+          icon={
+            <Icon
+              name="arrow-back"
+              type="material"
+              color="#ffffff"
+              iconStyle={{ marginRight: 10 }}
+            />
+          }
           title="Voltar"
           onPress={() => navigation.goBack()}
         />
